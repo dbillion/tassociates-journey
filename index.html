@@ -1,0 +1,1117 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>tassociates — Legal Counsel · Lagos & Global</title>
+  <meta name="description" content="Lawyers, ordinary people, and organisations belong at the same table—and move forward together. A restrained legal practice resident in Nigeria, serving clients globally." />
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+
+  <style>
+    :root, .sw-root {
+      --sw-bg: #0D151F;
+      --sw-ink: #FAF8F5;
+      --sw-ink-soft: #C3CCD6;
+      --sw-accent: #C49A45;
+      --color-navy: #0D151F;
+      --color-slate: #141E2B;
+      --color-surface-card: #162231;
+      --color-warm-ivory: #FAF8F5;
+      --color-warm-beige: #EBE5DB;
+      --color-gold: #C49A45;
+      --color-gold-hover: #D8AD55;
+      --font-serif: 'Playfair Display', Georgia, serif;
+      --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    }
+
+    * { box-sizing: border-box; }
+
+    /* Themed Browser Surfaces (Impeccable Craft Standards) */
+    ::selection {
+      background-color: rgba(196, 154, 69, 0.35);
+      color: #FFFFFF;
+    }
+    ::-moz-selection {
+      background-color: rgba(196, 154, 69, 0.35);
+      color: #FFFFFF;
+    }
+    :focus-visible {
+      outline: 2px solid var(--color-gold);
+      outline-offset: 3px;
+    }
+
+    /* Custom Refined Scrollbar */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: var(--color-navy);
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #223246;
+      border-radius: 4px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #334862;
+    }
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      background-color: var(--color-navy);
+      color: var(--color-warm-ivory);
+      font-family: var(--font-sans);
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      overflow-x: hidden;
+      caret-color: var(--color-gold);
+      scroll-behavior: smooth;
+    }
+
+    /* Fixed Navigation Bar */
+    .firm-nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 76px;
+      padding: 0 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      z-index: 9999;
+      background: linear-gradient(180deg, rgba(13, 21, 31, 0.96) 0%, rgba(13, 21, 31, 0.8) 75%, transparent 100%);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    }
+
+    .firm-nav__brand {
+      display: flex;
+      flex-direction: column;
+      text-decoration: none;
+      color: var(--color-warm-ivory);
+    }
+
+    .firm-nav__logo {
+      font-family: var(--font-serif);
+      font-size: 1.6rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      line-height: 1.1;
+    }
+
+    .firm-nav__logo span {
+      color: var(--color-gold);
+    }
+
+    .firm-nav__tagline {
+      font-size: 0.7rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--sw-ink-soft);
+      font-weight: 500;
+      margin-top: 2px;
+    }
+
+    .firm-nav__links {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+    }
+
+    .firm-nav__link {
+      font-size: 0.88rem;
+      font-weight: 500;
+      color: var(--sw-ink-soft);
+      text-decoration: none;
+      background: transparent;
+      border: none;
+      cursor: pointer;
+      font-family: var(--font-sans);
+      padding: 8px 0;
+      transition: color 0.2s ease;
+    }
+
+    .firm-nav__link:hover {
+      color: var(--color-warm-ivory);
+    }
+
+    /* Persistent Action Button */
+    .btn-talk {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--color-gold);
+      color: #0D151F;
+      font-weight: 600;
+      font-size: 0.88rem;
+      padding: 11px 24px;
+      border-radius: 999px;
+      text-decoration: none;
+      box-shadow: 0 4px 20px rgba(196, 154, 69, 0.25);
+      transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), background 0.2s ease, box-shadow 0.2s ease;
+      border: none;
+      cursor: pointer;
+      min-height: 44px;
+    }
+
+    .btn-talk:hover {
+      background: var(--color-gold-hover);
+      transform: translateY(-1px);
+      box-shadow: 0 6px 24px rgba(196, 154, 69, 0.38);
+    }
+
+    .btn-talk:active {
+      transform: translateY(0);
+    }
+
+    /* Floating Action on Mobile */
+    .mobile-cta-fab {
+      display: none;
+      position: fixed;
+      bottom: 24px;
+      right: 20px;
+      z-index: 9998;
+    }
+
+    /* Firm Sections (About Us, Services, Time & Offices) */
+    .firm-drawer-panel {
+      position: fixed;
+      inset: 0;
+      background: rgba(8, 13, 20, 0.88);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      z-index: 10001;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.28s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.28s;
+    }
+
+    .firm-drawer-panel.is-open {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .drawer-card {
+      background: #141E2B;
+      border: 1px solid rgba(196, 154, 69, 0.25);
+      border-radius: 18px;
+      max-width: 880px;
+      width: 100%;
+      max-height: 90vh;
+      overflow-y: auto;
+      padding: 44px;
+      position: relative;
+      box-shadow: 0 32px 80px rgba(0, 0, 0, 0.7);
+      transform: translateY(16px) scale(0.98);
+      transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .firm-drawer-panel.is-open .drawer-card {
+      transform: translateY(0) scale(1);
+    }
+
+    .drawer-close {
+      position: absolute;
+      top: 24px;
+      right: 24px;
+      background: rgba(255, 255, 255, 0.06);
+      border: none;
+      color: var(--color-warm-ivory);
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      font-size: 1.4rem;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background 0.2s;
+    }
+
+    .drawer-close:hover {
+      background: rgba(255, 255, 255, 0.16);
+    }
+
+    .drawer-tabs {
+      display: flex;
+      gap: 12px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      padding-bottom: 16px;
+      margin-bottom: 32px;
+      overflow-x: auto;
+    }
+
+    .drawer-tab {
+      background: transparent;
+      border: none;
+      color: var(--sw-ink-soft);
+      font-family: var(--font-sans);
+      font-size: 0.95rem;
+      font-weight: 500;
+      padding: 8px 18px;
+      border-radius: 999px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      white-space: nowrap;
+    }
+
+    .drawer-tab.is-active {
+      background: rgba(196, 154, 69, 0.18);
+      color: var(--color-gold);
+      font-weight: 600;
+    }
+
+    .tab-content {
+      display: none;
+      animation: fadeIn 0.25s ease forwards;
+    }
+
+    .tab-content.is-active {
+      display: block;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(6px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .drawer-title {
+      font-family: var(--font-serif);
+      font-size: 2.2rem;
+      letter-spacing: -0.02em;
+      margin: 0 0 16px;
+      color: var(--color-warm-ivory);
+    }
+
+    .drawer-lead {
+      color: var(--sw-ink-soft);
+      font-size: 1.05rem;
+      line-height: 1.618;
+      max-width: 65ch;
+      margin-bottom: 32px;
+    }
+
+    /* Service Grid */
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+      margin-top: 24px;
+    }
+
+    .service-item {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      border-radius: 14px;
+      padding: 24px;
+      transition: border-color 0.2s ease, transform 0.2s ease;
+    }
+
+    .service-item:hover {
+      border-color: rgba(196, 154, 69, 0.35);
+      transform: translateY(-2px);
+    }
+
+    .service-item h3 {
+      font-family: var(--font-serif);
+      font-size: 1.25rem;
+      color: var(--color-warm-ivory);
+      margin: 0 0 10px;
+    }
+
+    .service-item p {
+      color: var(--sw-ink-soft);
+      font-size: 0.88rem;
+      line-height: 1.55;
+      margin: 0;
+    }
+
+    /* Time & Desks Grid */
+    .time-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+      margin-top: 28px;
+    }
+
+    .time-card {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      border-radius: 14px;
+      padding: 26px;
+    }
+
+    .time-card h3 {
+      font-family: var(--font-serif);
+      font-size: 1.3rem;
+      color: var(--color-warm-ivory);
+      margin: 0 0 14px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .time-card h3 span {
+      display: inline-block;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #50B97A;
+    }
+
+    .time-row {
+      display: flex;
+      justify-content: space-between;
+      padding: 10px 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+      font-size: 0.88rem;
+    }
+
+    .time-row:last-child {
+      border-bottom: none;
+    }
+
+    .time-label {
+      color: var(--sw-ink-soft);
+    }
+
+    .time-val {
+      font-weight: 600;
+      color: var(--color-warm-ivory);
+    }
+
+    .guarantee-box {
+      margin-top: 28px;
+      background: rgba(196, 154, 69, 0.08);
+      border: 1px solid rgba(196, 154, 69, 0.2);
+      border-radius: 12px;
+      padding: 20px 24px;
+    }
+
+    .guarantee-box h4 {
+      margin: 0 0 8px;
+      color: var(--color-gold);
+      font-size: 0.95rem;
+      font-weight: 600;
+    }
+
+    .guarantee-box p {
+      margin: 0;
+      color: var(--sw-ink-soft);
+      font-size: 0.88rem;
+      line-height: 1.5;
+    }
+
+    /* Consultation & Direct Contact Modal */
+    .modal-backdrop {
+      position: fixed;
+      inset: 0;
+      background: rgba(8, 13, 20, 0.88);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      z-index: 10002;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.28s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.28s;
+    }
+
+    .modal-backdrop.is-open {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .modal-card {
+      background: #141E2B;
+      border: 1px solid rgba(196, 154, 69, 0.25);
+      border-radius: 18px;
+      max-width: 640px;
+      width: 100%;
+      max-height: 90vh;
+      overflow-y: auto;
+      padding: 40px;
+      position: relative;
+      box-shadow: 0 32px 80px rgba(0, 0, 0, 0.7);
+      transform: translateY(16px) scale(0.98);
+      transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .modal-backdrop.is-open .modal-card {
+      transform: translateY(0) scale(1);
+    }
+
+    .modal-close {
+      position: absolute;
+      top: 24px;
+      right: 24px;
+      background: rgba(255, 255, 255, 0.06);
+      border: none;
+      color: var(--color-warm-ivory);
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      font-size: 1.3rem;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background 0.2s;
+    }
+
+    .modal-close:hover {
+      background: rgba(255, 255, 255, 0.16);
+    }
+
+    .modal-header h2 {
+      font-family: var(--font-serif);
+      font-size: 2rem;
+      margin: 0 0 10px;
+      color: var(--color-warm-ivory);
+      letter-spacing: -0.02em;
+    }
+
+    .modal-header p {
+      color: var(--sw-ink-soft);
+      font-size: 0.95rem;
+      line-height: 1.6;
+      margin: 0 0 28px;
+      max-width: 52ch;
+    }
+
+    .modal-offices {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-bottom: 28px;
+      padding-bottom: 24px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .office-item {
+      background: rgba(255, 255, 255, 0.03);
+      padding: 16px;
+      border-radius: 12px;
+      border: 1px solid rgba(255, 255, 255, 0.06);
+    }
+
+    .office-item h4 {
+      margin: 0 0 6px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--color-warm-ivory);
+    }
+
+    .office-item p {
+      margin: 0;
+      font-size: 0.82rem;
+      color: var(--sw-ink-soft);
+      line-height: 1.5;
+    }
+
+    .form-group {
+      margin-bottom: 18px;
+    }
+
+    .form-group label {
+      display: block;
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--sw-ink-soft);
+      margin-bottom: 8px;
+    }
+
+    .form-input, .form-textarea, .form-select {
+      width: 100%;
+      background: rgba(9, 14, 21, 0.6);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 10px;
+      padding: 13px 15px;
+      color: var(--color-warm-ivory);
+      font-family: var(--font-sans);
+      font-size: 0.92rem;
+      transition: border-color 0.2s;
+    }
+
+    .form-input:focus, .form-textarea:focus, .form-select:focus {
+      outline: none;
+      border-color: var(--color-gold);
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+
+    .form-submit-btn {
+      width: 100%;
+      background: var(--color-gold);
+      color: #0D151F;
+      border: none;
+      border-radius: 10px;
+      padding: 14px;
+      font-weight: 700;
+      font-size: 0.95rem;
+      cursor: pointer;
+      min-height: 48px;
+      transition: background 0.2s ease, transform 0.1s ease;
+      margin-top: 8px;
+    }
+
+    .form-submit-btn:hover {
+      background: var(--color-gold-hover);
+    }
+
+    /* Editorial Reduced-Motion Fallback */
+    @media (prefers-reduced-motion: reduce) {
+      #world {
+        display: none !important;
+      }
+
+      .reduced-motion-view {
+        display: block !important;
+        max-width: 860px;
+        margin: 120px auto 80px;
+        padding: 0 28px;
+      }
+
+      .rm-hero {
+        text-align: center;
+        margin-bottom: 72px;
+      }
+
+      .rm-hero h1 {
+        font-family: var(--font-serif);
+        font-size: 2.8rem;
+        line-height: 1.2;
+        letter-spacing: -0.025em;
+        margin-bottom: 20px;
+        color: var(--color-warm-ivory);
+      }
+
+      .rm-hero p {
+        font-size: 1.15rem;
+        color: var(--sw-ink-soft);
+        max-width: 60ch;
+        margin: 0 auto;
+        line-height: 1.618;
+      }
+
+      .rm-card {
+        background: #141E2B;
+        border-radius: 16px;
+        overflow: hidden;
+        margin-bottom: 64px;
+        border: 1px solid rgba(255, 255, 255, 0.08);
+      }
+
+      .rm-card img {
+        width: 100%;
+        height: 480px;
+        object-fit: cover;
+        display: block;
+      }
+
+      .rm-card__content {
+        padding: 40px;
+      }
+
+      .rm-card__title {
+        font-family: var(--font-serif);
+        font-size: 2.2rem;
+        line-height: 1.25;
+        letter-spacing: -0.02em;
+        margin: 0 0 16px;
+        color: var(--color-warm-ivory);
+      }
+
+      .rm-card__body {
+        color: var(--sw-ink-soft);
+        font-size: 1.05rem;
+        line-height: 1.618;
+        max-width: 65ch;
+        margin-bottom: 28px;
+      }
+
+      .rm-tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+      }
+
+      .rm-tag {
+        background: rgba(255, 255, 255, 0.05);
+        padding: 6px 14px;
+        border-radius: 999px;
+        font-size: 0.8rem;
+        color: var(--sw-ink-soft);
+        border: 1px solid rgba(255, 255, 255, 0.06);
+      }
+
+      .rm-static-section {
+        margin-top: 80px;
+        padding-top: 60px;
+        border-top: 1px solid rgba(255, 255, 255, 0.08);
+      }
+    }
+
+    .reduced-motion-view {
+      display: none;
+    }
+
+    /* Mobile adjustments */
+    @media (max-width: 860px) {
+      .firm-nav { padding: 0 20px; }
+      .firm-nav__links { display: none; }
+      .mobile-cta-fab { display: block; }
+      .drawer-card { padding: 28px 20px; }
+      .services-grid { grid-template-columns: 1fr; }
+      .time-grid { grid-template-columns: 1fr; }
+      .modal-card { padding: 28px 20px; }
+      .modal-offices { grid-template-columns: 1fr; }
+      .form-row { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Fixed Top Header -->
+  <header class="firm-nav">
+    <a href="#top" class="firm-nav__brand" aria-label="tassociates home">
+      <div class="firm-nav__logo">tassociates<span>.</span></div>
+      <div class="firm-nav__tagline">Legal Counsel · Lagos & Global</div>
+    </a>
+    
+    <nav class="firm-nav__links" aria-label="Primary Navigation">
+      <button type="button" class="firm-nav__link" onclick="openFirmDrawer('about')">About Us</button>
+      <button type="button" class="firm-nav__link" onclick="openFirmDrawer('services')">Services Offered</button>
+      <button type="button" class="firm-nav__link" onclick="openFirmDrawer('hours')">Hours & Locations</button>
+      <button type="button" class="btn-talk" onclick="openContactModal()" aria-haspopup="dialog">
+        Talk to us <span>→</span>
+      </button>
+    </nav>
+  </header>
+
+  <!-- Mobile Floating Action Button -->
+  <div class="mobile-cta-fab">
+    <button type="button" class="btn-talk" onclick="openContactModal()" aria-haspopup="dialog" style="padding: 12px 24px; font-size: 0.95rem; box-shadow: 0 8px 30px rgba(0,0,0,0.6);">
+      Talk to us <span>→</span>
+    </button>
+  </div>
+
+  <div id="top"></div>
+
+  <!-- Scroll-World Container for standard users -->
+  <div id="world"></div>
+
+  <!-- Accessible Static Alternative for prefers-reduced-motion -->
+  <main class="reduced-motion-view">
+    <div class="rm-hero">
+      <h1>Lawyers, ordinary people, and organisations belong at the same table.</h1>
+      <p>A restrained, documentary journey into how tassociates partners with clients across Nigeria and globally.</p>
+    </div>
+
+    <article class="rm-card" id="rm-table">
+      <img src="assets/table.webp" alt="A round wooden table in warm morning daylight with documents and empty chairs" />
+      <div class="rm-card__content">
+        <h2 class="rm-card__title">Every conversation starts at the same level.</h2>
+        <p class="rm-card__body">
+          No podiums, no pedestals. Whether you are an individual safeguarding family assets, an expanding corporate entity, or referring international counsel seeking a reliable Nigerian co-counsel, all three belong at this table. All three are expected.
+        </p>
+        <div class="rm-tags">
+          <span class="rm-tag">Egalitarian Standing</span>
+          <span class="rm-tag">Nigeria & International</span>
+          <span class="rm-tag">Documentary Clarity</span>
+        </div>
+      </div>
+    </article>
+
+    <article class="rm-card" id="rm-hands">
+      <img src="assets/hands.webp" alt="Close-up of three hands with different sleeves working together over documents" />
+      <div class="rm-card__content">
+        <h2 class="rm-card__title">We sit beside you, not above you.</h2>
+        <p class="rm-card__body">
+          Complex legal solutions are not handed down from an ivory tower. They are crafted shoulder-to-shoulder—diverse hands rolling up their sleeves around the same agreement, untangling cross-border regulatory friction into direct, pragmatic clarity.
+        </p>
+        <div class="rm-tags">
+          <span class="rm-tag">Hands-on Partnership</span>
+          <span class="rm-tag">Plain-Spoken Insight</span>
+          <span class="rm-tag">Collaborative Strategy</span>
+        </div>
+      </div>
+    </article>
+
+    <article class="rm-card" id="rm-door">
+      <img src="assets/door.webp" alt="Three colleagues walking together through a doorway into warm open light" />
+      <div class="rm-card__content">
+        <h2 class="rm-card__title">Where you go, we walk with you.</h2>
+        <p class="rm-card__body">
+          Legal guidance does not conclude when the transaction is signed. We walk with you through every doorway into new markets, new ventures, and new stages of life—protecting what matters so you can step into the light with confidence.
+        </p>
+        <div class="rm-tags">
+          <span class="rm-tag">Long-Term Guardianship</span>
+          <span class="rm-tag">Dispute Resilience</span>
+          <span class="rm-tag">Strategic Expansion</span>
+        </div>
+        <div style="margin-top: 36px;">
+          <button type="button" class="btn-talk" onclick="openContactModal()" style="padding: 14px 28px; font-size: 1rem;">
+            Talk to us today <span>→</span>
+          </button>
+        </div>
+      </div>
+    </article>
+
+    <!-- Static About, Services & Hours for Reduced Motion Mode -->
+    <section class="rm-static-section">
+      <h2 style="font-family: var(--font-serif); font-size: 2.2rem; margin-bottom: 16px;">About tassociates</h2>
+      <p style="color: var(--sw-ink-soft); line-height: 1.6; max-width: 65ch;">
+        Resident in Victoria Island, Lagos, tassociates provides strategic legal counsel for individuals, domestic enterprises, and global corporations. We reject stiff hierarchies in favor of genuine equality: we sit with our clients at the table to build enduring legal and commercial clarity.
+      </p>
+
+      <h3 style="font-family: var(--font-serif); font-size: 1.8rem; margin: 48px 0 20px;">Services Offered</h3>
+      <div class="services-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+        <div class="service-item">
+          <h3>Corporate Governance & Commercial</h3>
+          <p>Entity structuring, CAC compliance, joint ventures, regulatory audits, and commercial contracting.</p>
+        </div>
+        <div class="service-item">
+          <h3>Dispute Resolution & Arbitration</h3>
+          <p>Commercial litigation before Nigerian Superior Courts and arbitration under LCIA, ICC, and LCA rules.</p>
+        </div>
+        <div class="service-item">
+          <h3>Cross-Border Investment & FDI</h3>
+          <p>Navigating Central Bank of Nigeria (CBN) capital importation certificates, FX regulations, and market entry.</p>
+        </div>
+        <div class="service-item">
+          <h3>Private Wealth & Real Estate</h3>
+          <p>Governor's consent, land title investigation at the Lands Bureau, family wealth trusts, and succession.</p>
+        </div>
+      </div>
+
+      <h3 style="font-family: var(--font-serif); font-size: 1.8rem; margin: 48px 0 20px;">Operating Hours & Response Time</h3>
+      <div class="time-card" style="margin-top: 20px;">
+        <div class="time-row"><span class="time-label">Lagos Chambers (WAT)</span><span class="time-val">08:30 – 18:00 (Mon–Fri)</span></div>
+        <div class="time-row"><span class="time-label">London Liaison (GMT)</span><span class="time-val">09:00 – 17:30 (Mon–Fri)</span></div>
+        <div class="time-row"><span class="time-label">Partner Response Time</span><span class="time-val">Within 24 Hours</span></div>
+        <div class="time-row"><span class="time-label">Emergency Injunctions / Arrests</span><span class="time-val">24/7 Rapid Mobilization</span></div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Dedicated Firm Information Drawer (About, Services, Hours) -->
+  <div class="firm-drawer-panel" id="firmDrawer" role="dialog" aria-modal="true" aria-labelledby="drawerTitle">
+    <div class="drawer-card">
+      <button type="button" class="drawer-close" onclick="closeFirmDrawer()" aria-label="Close panel">&times;</button>
+      
+      <div class="drawer-tabs" role="tablist">
+        <button type="button" class="drawer-tab is-active" id="tabBtn-about" role="tab" onclick="switchDrawerTab('about')">About Us</button>
+        <button type="button" class="drawer-tab" id="tabBtn-services" role="tab" onclick="switchDrawerTab('services')">Services Offered</button>
+        <button type="button" class="drawer-tab" id="tabBtn-hours" role="tab" onclick="switchDrawerTab('hours')">Hours & Locations</button>
+      </div>
+
+      <!-- Tab 1: About Us -->
+      <div class="tab-content is-active" id="tabContent-about" role="tabpanel">
+        <h2 class="drawer-title" id="drawerTitle">A practice built on equal standing.</h2>
+        <p class="drawer-lead">
+          tassociates is a commercial and private client law firm resident in Lagos, Nigeria, with seasoned liaison desks in London and New York. We exist to solve a persistent flaw in traditional legal practice: the distance between counsel and client.
+        </p>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; margin-top: 24px;">
+          <div class="service-item">
+            <h3>No Pedestals</h3>
+            <p>We sit beside our clients. Whether you are an everyday citizen navigating family assets or an institutional investor, we communicate in plain, actionable language.</p>
+          </div>
+          <div class="service-item">
+            <h3>Lagos Roots, Global Sight</h3>
+            <p>Deep familiarity with Nigeria’s regulatory architecture—from the Corporate Affairs Commission (CAC) to the Central Bank of Nigeria (CBN)—paired with global dispute standards.</p>
+          </div>
+          <div class="service-item">
+            <h3>Enduring Guardianship</h3>
+            <p>Our mandate does not end when documents are signed. We walk alongside our clients through operational hurdles, regulatory shifts, and commercial expansion.</p>
+          </div>
+        </div>
+        <div style="margin-top: 32px; display: flex; gap: 16px;">
+          <button type="button" class="btn-talk" onclick="closeFirmDrawer(); openContactModal();">
+            Consult with a Partner <span>→</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Tab 2: Services Offered -->
+      <div class="tab-content" id="tabContent-services" role="tabpanel">
+        <h2 class="drawer-title">Practices tailored for real impact.</h2>
+        <p class="drawer-lead">
+          We combine local statutory fluency with international legal rigor. Every practice group is led directly by experienced partners.
+        </p>
+        <div class="services-grid">
+          <div class="service-item">
+            <h3>Corporate & Commercial Advisory</h3>
+            <p>Corporate restructuring, CAC compliance, joint ventures, board governance, shareholder agreements, and commercial contracting for scaling ventures.</p>
+          </div>
+          <div class="service-item">
+            <h3>Dispute Resolution & Arbitration</h3>
+            <p>Commercial litigation before the High Court, Court of Appeal, and Supreme Court of Nigeria. International arbitration under LCIA, ICC, and Lagos Court of Arbitration (LCA) rules.</p>
+          </div>
+          <div class="service-item">
+            <h3>Cross-Border Investment & FDI</h3>
+            <p>Foreign direct investment into West Africa, Certificate of Capital Importation (CCI) compliance, repatriation of proceeds, and bilateral treaty alignment.</p>
+          </div>
+          <div class="service-item">
+            <h3>Real Estate, Titles & Infrastructure</h3>
+            <p>Investigation of title at the Lagos State Lands Bureau, perfection of Governor’s Consent, infrastructure leasing, and construction dispute advisory.</p>
+          </div>
+          <div class="service-item">
+            <h3>Private Client, Estates & Family Wealth</h3>
+            <p>Private trusts, estate succession, probate administration, family constitutions, and intergenerational wealth preservation for Nigerian and diaspora families.</p>
+          </div>
+          <div class="service-item">
+            <h3>Referring Co-Counsel & Agency</h3>
+            <p>Trusted on-the-ground Nigerian representation for international law firms in London, New York, and Dubai requiring rapid, ethical local execution.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tab 3: Operating Hours & Locations -->
+      <div class="tab-content" id="tabContent-hours" role="tabpanel">
+        <h2 class="drawer-title">Hours, locations, and time commitments.</h2>
+        <p class="drawer-lead">
+          We operate across time zones to match our clients’ commercial tempo. When urgent regulatory or litigation matters arise, our emergency team mobilizes immediately.
+        </p>
+        <div class="time-grid">
+          <div class="time-card">
+            <h3><span></span> Lagos Head Chambers</h3>
+            <div class="time-row"><span class="time-label">Time Zone</span><span class="time-val">WAT (UTC +1)</span></div>
+            <div class="time-row"><span class="time-label">Monday – Thursday</span><span class="time-val">08:30 – 18:00</span></div>
+            <div class="time-row"><span class="time-label">Friday</span><span class="time-val">08:30 – 17:00</span></div>
+            <div class="time-row"><span class="time-label">Saturday & Sunday</span><span class="time-val">Urgent Matters Only</span></div>
+            <div class="time-row"><span class="time-label">Chambers Address</span><span class="time-val">Victoria Island, Lagos</span></div>
+          </div>
+
+          <div class="time-card">
+            <h3><span></span> Global Liaison Desks</h3>
+            <div class="time-row"><span class="time-label">London Desk (GMT)</span><span class="time-val">09:00 – 17:30</span></div>
+            <div class="time-row"><span class="time-label">North America (EST)</span><span class="time-val">09:00 – 17:00</span></div>
+            <div class="time-row"><span class="time-label">Cross-Border Hotline</span><span class="time-val">+234 (1) 460-8800</span></div>
+            <div class="time-row"><span class="time-label">Direct Counsel Email</span><span class="time-val">counsel@tassociates.ng</span></div>
+            <div class="time-row"><span class="time-label">Encrypted Channels</span><span class="time-val">Signal / WhatsApp</span></div>
+          </div>
+        </div>
+
+        <div class="guarantee-box">
+          <h4>Our Response Time Standard</h4>
+          <p>
+            • <strong>24-Hour Review:</strong> Every confidential brief received is reviewed and acknowledged by a partner within 24 hours.<br>
+            • <strong>4-Hour Emergency Dispatch:</strong> For vessel arrests, ex-parte injunctions, or regulatory detentions, our rapid-response team mobilizes within 4 hours.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Interactive Direct Consultation Modal -->
+  <div class="modal-backdrop" id="contactModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal-card">
+      <button type="button" class="modal-close" onclick="closeContactModal()" aria-label="Close dialog">&times;</button>
+      
+      <div class="modal-header">
+        <h2 id="modalTitle">Let’s sit at the table.</h2>
+        <p>Tell us about your matter. Whether in Lagos, Abuja, London, or beyond, a partner will respond directly within 24 hours.</p>
+      </div>
+
+      <div class="modal-offices">
+        <div class="office-item">
+          <h4>Nigeria Head Chambers</h4>
+          <p>Victoria Island, Lagos, Nigeria<br>Tel: +234 (1) 460-8800<br>counsel@tassociates.ng</p>
+        </div>
+        <div class="office-item">
+          <h4>Global & Referring Counsel Desk</h4>
+          <p>London & New York Liaison<br>Cross-Border Practice Desk<br>global@tassociates.ng</p>
+        </div>
+      </div>
+
+      <form onsubmit="handleFormSubmit(event)">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="clientName">Your Name</label>
+            <input type="text" id="clientName" class="form-input" placeholder="e.g. Adeola Johnson" required />
+          </div>
+          <div class="form-group">
+            <label for="clientEmail">Email or WhatsApp</label>
+            <input type="text" id="clientEmail" class="form-input" placeholder="name@domain.com or phone" required />
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="clientRole">You Represent</label>
+            <select id="clientRole" class="form-select">
+              <option value="organisation">An Enterprise or Organisation</option>
+              <option value="individual">An Individual or Family</option>
+              <option value="referring_lawyer">Referring Lawyer / Co-Counsel</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="matterArea">Practice Focus</label>
+            <select id="matterArea" class="form-select">
+              <option value="corporate">Corporate & Commercial</option>
+              <option value="crossborder">Cross-Border Investments</option>
+              <option value="disputes">Dispute Resolution & Arbitration</option>
+              <option value="property">Real Estate & Infrastructure</option>
+              <option value="privateclient">Private Wealth & Estate</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="clientMessage">Brief Overview of the Matter</label>
+          <textarea id="clientMessage" rows="3" class="form-textarea" placeholder="How can we help you move forward?"></textarea>
+        </div>
+
+        <button type="submit" class="form-submit-btn">Send Confidential Inquiry</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="scrub-engine.js"></script>
+  <script>
+    // Drawer Tab Navigation
+    function openFirmDrawer(tab) {
+      const drawer = document.getElementById('firmDrawer');
+      drawer.classList.add('is-open');
+      document.body.style.overflow = 'hidden';
+      if (tab) switchDrawerTab(tab);
+    }
+
+    function closeFirmDrawer() {
+      const drawer = document.getElementById('firmDrawer');
+      drawer.classList.remove('is-open');
+      document.body.style.overflow = '';
+    }
+
+    function switchDrawerTab(tabName) {
+      document.querySelectorAll('.drawer-tab').forEach(b => b.classList.remove('is-active'));
+      document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('is-active'));
+      const activeBtn = document.getElementById('tabBtn-' + tabName);
+      const activeContent = document.getElementById('tabContent-' + tabName);
+      if (activeBtn) activeBtn.classList.add('is-active');
+      if (activeContent) activeContent.classList.add('is-active');
+    }
+
+    document.getElementById('firmDrawer').addEventListener('click', (e) => {
+      if (e.target === document.getElementById('firmDrawer')) closeFirmDrawer();
+    });
+
+    // Modal controls & accessible keyboard handling
+    function openContactModal() {
+      const modal = document.getElementById('contactModal');
+      modal.classList.add('is-open');
+      document.body.style.overflow = 'hidden';
+      setTimeout(() => {
+        const firstInput = document.getElementById('clientName');
+        if (firstInput) firstInput.focus();
+      }, 100);
+    }
+
+    function closeContactModal() {
+      const modal = document.getElementById('contactModal');
+      modal.classList.remove('is-open');
+      document.body.style.overflow = '';
+    }
+
+    document.getElementById('contactModal').addEventListener('click', (e) => {
+      if (e.target === document.getElementById('contactModal')) closeContactModal();
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        closeContactModal();
+        closeFirmDrawer();
+      }
+    });
+
+    function handleFormSubmit(e) {
+      e.preventDefault();
+      alert('Thank you. Your inquiry has been received. A partner will reach out within one business day.');
+      closeContactModal();
+    }
+
+    // Mount Scroll World if reduced motion is not preferred
+    if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      mountScrollWorld(document.getElementById('world'), {
+        brand: { name: 'tassociates', href: '#top' },
+        cta: { label: 'Talk to us', href: 'javascript:openContactModal()' },
+        hint: 'scroll to journey with us',
+        diveScroll: 1.4,
+        connScroll: 1.0,
+        atmosphere: true,
+        nav: true,
+        sections: [
+          {
+            id: 'table',
+            label: 'The Table',
+            still: 'assets/table.webp',
+            clip: 'assets/vid/table.mp4',
+            clipMobile: 'assets/vid/table-m.mp4',
+            accent: '#C49A45',
+            scroll: 1.5,
+            linger: 0.35,
+            title: 'All three belong at this table.',
+            body: 'We sit with our clients, not above them. Lawyers, ordinary people, and organisations start every conversation at the same level—no podiums, no pedestals.',
+            tags: ['Egalitarian Counsel', 'Lagos & Global', 'Documentary Clarity']
+          },
+          {
+            id: 'hands',
+            label: 'The Hands',
+            still: 'assets/hands.webp',
+            clip: 'assets/vid/hands.mp4',
+            clipMobile: 'assets/vid/hands-m.mp4',
+            accent: '#4E87A0',
+            scroll: 1.5,
+            linger: 0.35,
+            title: 'We sit beside you, not above you.',
+            body: 'Complex legal challenges are solved by diverse hands rolling up their sleeves around the same agreement—translating intricate statutory demands into steady, transparent progress.',
+            tags: ['Hands-on Partnership', 'Cross-Border Insight', 'No Hollow Jargon']
+          },
+          {
+            id: 'door',
+            label: 'The Door',
+            still: 'assets/door.webp',
+            clip: 'assets/vid/door.mp4',
+            clipMobile: 'assets/vid/door-m.mp4',
+            accent: '#E0A96D',
+            scroll: 1.6,
+            linger: 0.4,
+            title: 'Where you go, we walk with you.',
+            body: 'True counsel extends beyond the signing of a document. We walk shoulder-to-shoulder with you through every doorway into open, warm light.',
+            tags: ['Long-term Guardianship', 'Strategic Growth', 'Dispute Resilience'],
+            cta: {
+              primary: { label: 'Talk to us', href: 'javascript:openContactModal()' },
+              secondary: { label: 'Explore Services', href: 'javascript:openFirmDrawer(\"services\")' }
+            }
+          }
+        ],
+        connectors: [
+          'assets/vid/conn1.mp4',
+          'assets/vid/conn2.mp4'
+        ],
+        connectorsMobile: [
+          'assets/vid/conn1-m.mp4',
+          'assets/vid/conn2-m.mp4'
+        ]
+      });
+    }
+  </script>
+</body>
+</html>
